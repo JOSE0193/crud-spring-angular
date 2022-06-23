@@ -1,5 +1,5 @@
 <mat-card>
-  <mat-toolbar color="primary">Cursos</mat-toolbar>
+<mat-toolbar color="primary">Cursos</mat-toolbar>
 
   <div *ngIf="cursos$ | async as cursos; else loading">
     <table mat-table [dataSource]="cursos" class="mat-elevation-z8">
