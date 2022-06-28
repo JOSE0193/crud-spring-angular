@@ -12,7 +12,7 @@ import lombok.AllArgsConstructor;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/courses")
+@RequestMapping("/api/cursos")
 @AllArgsConstructor
 public class CourseController {
     
