@@ -25,7 +25,7 @@ export class CursosComponent implements OnInit {
   ) {
     this.cursos$ = this.cursosService.listAll()
     .pipe(
-      catchError(error => {
+      catchError(_error => {
         this.onError('Erro ao carregar cursos!');
         return of([])
       })
@@ -41,6 +41,6 @@ export class CursosComponent implements OnInit {
   ngOnInit(): void { }
 
   onAdd(){
-    this.router.navigate(['novo'], {relativeTo: this.route})
+    this.router.navigate(['new'], {relativeTo: this.route})
   }
 }
