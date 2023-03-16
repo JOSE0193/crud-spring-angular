@@ -9,7 +9,7 @@ import { Course } from '../model/course';
 })
 export class CoursesService {
 
-  private readonly API = 'api/courses';
+  private readonly API = '/courses';
 
   constructor(
     private httpClient: HttpClient

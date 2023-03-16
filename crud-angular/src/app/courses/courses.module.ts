@@ -20,7 +20,7 @@ import { CoursesListComponent } from './components/courses-list/courses-list.com
     CoursesRoutingModule,
     AppMaterialModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ]
 })
 export class CoursesModule { }
