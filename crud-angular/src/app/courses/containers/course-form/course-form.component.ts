@@ -58,4 +58,24 @@ export class CourseFormComponent implements OnInit {
     this.snackBar.open('Erro ao salvar Curso!', '', { duration: 5000 });
   }
 
+  getErrorMessage(fieldName: string) {
+    const field = this.form.get(fieldName);
+
+    if(field?.hasError('required')) {
+      return 'Campo Obrigatório'
+    }
+
+    if(field?.hasError('minlength')) {
+      const requiredlength = field.errors ? field.errors['minlength']['requiredLength'] : 5
+      return `Tamanho mínimo precisa ser de ${requiredlength} caracteres.`;
+    }
+
+    if(field?.hasError('maxlength')) {
+      const requiredlength = field.errors ? field.errors['minlength']['requiredLength'] : 100
+      return `Tamanho máximo precisa ser de ${requiredlength} caracteres.`;
+    }
+
+    return 'Campo Inválido'
+  }
+
 }
