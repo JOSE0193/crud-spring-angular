@@ -21,7 +21,7 @@ export class CoursesListComponent implements OnInit {
     private route: ActivatedRoute
   ) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void { }  
 
   onAdd(){
     this.add.emit(true);
